@@ -1,0 +1,21 @@
+[0514/162916.445:ERROR:process_info.cc(329)] VirtualQueryEx: Acesso negado. (0x5)
+[0514/162916.478:ERROR:process_info.cc(550)] ReadMemoryInfo failed
+[0514/162916.478:ERROR:process_reader_win.cc(242)] ReadMemory at 0x7ffbdfd03218 of 12 bytes failed: Somente uma parte de um pedido ReadProcessMemory ou WriteProcessMemory foi concluída. (0x12B)
+[0514/162916.503:WARNING:process_snapshot_win.cc(69)] ReadMemory ExceptionInformation failed
+[0514/162916.503:WARNING:crash_report_exception_handler.cc(62)] ProcessSnapshotWin::Initialize failed
+[0514/162916.503:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: Tentou-se acessar um processo de saída. (0xc000010a)
+[0514/171649.709:ERROR:process_info.cc(329)] VirtualQueryEx: Acesso negado. (0x5)
+[0514/171649.782:ERROR:process_info.cc(550)] ReadMemoryInfo failed
+[0514/171649.783:ERROR:process_reader_win.cc(242)] ReadMemory at 0x7ffbdfd03218 of 12 bytes failed: Somente uma parte de um pedido ReadProcessMemory ou WriteProcessMemory foi concluída. (0x12B)
+[0514/171649.815:WARNING:process_snapshot_win.cc(69)] ReadMemory ExceptionInformation failed
+[0514/171649.815:WARNING:crash_report_exception_handler.cc(62)] ProcessSnapshotWin::Initialize failed
+[0514/171649.815:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: Tentou-se acessar um processo de saída. (0xc000010a)
+[0516/162104.507:ERROR:file_io_win.cc(161)] CreateFile C:\Users\WELLIN~1.CAR\AppData\Local\Temp\scoped_dir8252_24191\Crashpad\settings.dat: O sistema não pode encontrar o caminho especificado. (0x3)
+[0516/162104.536:ERROR:file_io_win.cc(170)] CreateFile C:\Users\WELLIN~1.CAR\AppData\Local\Temp\scoped_dir8252_24191\Crashpad\reports\4906bb0b-a800-4867-b146-c57203eb1c08.dmp: O sistema não pode encontrar o caminho especificado. (0x3)
+[0516/162104.536:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0517/105506.114:ERROR:file_io_win.cc(161)] CreateFile C:\Users\WELLIN~1.CAR\AppData\Local\Temp\scoped_dir2800_2533\Crashpad\settings.dat: O sistema não pode encontrar o caminho especificado. (0x3)
+[0517/105506.160:ERROR:file_io_win.cc(170)] CreateFile C:\Users\WELLIN~1.CAR\AppData\Local\Temp\scoped_dir2800_2533\Crashpad\reports\18bdc8de-54d3-4943-b018-a49801876f25.dmp: O sistema não pode encontrar o caminho especificado. (0x3)
+[0517/105506.160:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0517/161722.711:ERROR:file_io_win.cc(161)] CreateFile C:\Users\WELLIN~1.CAR\AppData\Local\Temp\scoped_dir14504_10933\Crashpad\settings.dat: O sistema não pode encontrar o caminho especificado. (0x3)
+[0517/161722.748:ERROR:file_io_win.cc(170)] CreateFile C:\Users\WELLIN~1.CAR\AppData\Local\Temp\scoped_dir14504_10933\Crashpad\reports\0bc144cd-61b8-4303-b001-aaa89ea69d50.dmp: O sistema não pode encontrar o caminho especificado. (0x3)
+[0517/161722.748:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
