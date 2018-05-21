@@ -1,16 +1,17 @@
 package us.mircloud.workfyqa.teste;
 import static us.mircloud.workfyqa.core.DriverFactory.getDriver;
-import static us.mircloud.workfyqa.core.DriverFactory.killDriver;
-import org.junit.After;
+
 import org.junit.Before;
 import org.junit.Test;
+
+import us.mircloud.workfyqa.core.BaseTest;
 import us.mircloud.workfyqa.core.DSL;
 import us.mircloud.workfyqa.page.ConfiguracaoDocumentoPage;
 import us.mircloud.workfyqa.page.DashboardPage;
 import us.mircloud.workfyqa.page.LoginPage;
 import us.mircloud.workfyqa.page.ModoGedPage;
 
-public class TesteIndexacaoSemUnicidade {
+public class TesteIndexacaoSemUnicidade extends BaseTest{
 	private LoginPage page;
 	private DashboardPage dash;
 	private ConfiguracaoDocumentoPage  confdocto;
@@ -28,11 +29,7 @@ public class TesteIndexacaoSemUnicidade {
 		ged =  new ModoGedPage();
 		
 	}
-	@After
-	public void finaliza() {
-
-		killDriver();
-	}
+	
 
 	@Test
 	public void testeIndexarSemDuplicidade() throws Exception {

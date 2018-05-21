@@ -1,13 +1,8 @@
 package us.mircloud.workfyqa.page;
-import us.mircloud.workfyqa.core.DSL;
+import us.mircloud.workfyqa.core.BasePage;
 
-public class AdminPage {
-	private DSL dsl;
-
-	public AdminPage() {
-		dsl = new DSL();
-	}
-
+public class AdminPage extends BasePage {
+	
 	public void setAdcionarUsuario () {
 
 		dsl.click_xpath("//a/span[2]");

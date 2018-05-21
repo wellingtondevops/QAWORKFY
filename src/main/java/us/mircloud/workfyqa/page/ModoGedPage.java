@@ -1,11 +1,8 @@
 package us.mircloud.workfyqa.page;
-import us.mircloud.workfyqa.core.DSL;
+import us.mircloud.workfyqa.core.BasePage;
 
-public class ModoGedPage {
-	private DSL dsl;
-	public ModoGedPage() {
-		dsl = new DSL();
-	}	
+public class ModoGedPage extends BasePage{
+	
 
 	public void setCodauAvaliaDesempenho() {
 

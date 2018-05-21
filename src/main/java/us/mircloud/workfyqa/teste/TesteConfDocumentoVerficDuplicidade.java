@@ -1,15 +1,16 @@
 package us.mircloud.workfyqa.teste;
 import static us.mircloud.workfyqa.core.DriverFactory.getDriver;
-import static us.mircloud.workfyqa.core.DriverFactory.killDriver;
-import org.junit.After;
+
 import org.junit.Before;
 import org.junit.Test;
+
+import us.mircloud.workfyqa.core.BaseTest;
 import us.mircloud.workfyqa.core.DSL;
 import us.mircloud.workfyqa.page.ConfiguracaoDocumentoPage;
 import us.mircloud.workfyqa.page.DashboardPage;
 import us.mircloud.workfyqa.page.LoginPage;
 
-public class TesteConfDocumentoVerficDuplicidade {
+public class TesteConfDocumentoVerficDuplicidade extends BaseTest{
 
 	private LoginPage page;
 	private DashboardPage dash;
@@ -27,13 +28,7 @@ public class TesteConfDocumentoVerficDuplicidade {
 	}
 
 
-
-	@After
-	public void finaliza() {
-
-		killDriver();
-
-	}
+	
 	@Test
 	public void testeConfigurarDuplicidade() throws Exception {
 

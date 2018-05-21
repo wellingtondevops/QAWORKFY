@@ -1,9 +1,10 @@
 package us.mircloud.workfyqa.page;
 import org.openqa.selenium.WebDriver;
 
+import us.mircloud.workfyqa.core.BasePage;
 import us.mircloud.workfyqa.core.DSL;
 
-public class DashboardPage {
+public class DashboardPage extends BasePage {
 	private DSL dsl;
 	private WebDriver driver;
 

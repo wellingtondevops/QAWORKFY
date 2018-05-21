@@ -1,14 +1,9 @@
 package us.mircloud.workfyqa.page;
-import us.mircloud.workfyqa.core.DSL;
+import us.mircloud.workfyqa.core.BasePage;
 
-public class LoginPage {
+public class LoginPage  extends BasePage{
 
-	private DSL dsl;
-
-	public LoginPage() {
-		dsl = new DSL();
-
-	}
+	
 
 	public void setEmail( ) {
 		dsl.escreve_field_name("email","wellington.carvalho@smartscan.com.br" );

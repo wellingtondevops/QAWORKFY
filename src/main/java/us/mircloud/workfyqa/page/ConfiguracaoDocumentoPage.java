@@ -1,16 +1,13 @@
 package us.mircloud.workfyqa.page;
 import static org.junit.Assert.assertEquals;
-import us.mircloud.workfyqa.core.DSL;
+
+import us.mircloud.workfyqa.core.BasePage;
 
 
 
 
-public class ConfiguracaoDocumentoPage {
-	private DSL dsl;
-
-	public ConfiguracaoDocumentoPage() {
-		dsl =new DSL();
-	}
+public class ConfiguracaoDocumentoPage extends BasePage {
+	
 
 	public void verificaBotaoConfiguracoes() throws InterruptedException {
 		dsl.chekarComponente("Configurações", "//div[@id='withBtnGroup']/button/span");

@@ -1,15 +1,16 @@
 package us.mircloud.workfyqa.teste;
 import static us.mircloud.workfyqa.core.DriverFactory.getDriver;
-import static us.mircloud.workfyqa.core.DriverFactory.killDriver;
-import org.junit.After;
+
 import org.junit.Before;
 import org.junit.Test;
+
+import us.mircloud.workfyqa.core.BaseTest;
 import us.mircloud.workfyqa.core.DSL;
 import us.mircloud.workfyqa.page.AdminPage;
 import us.mircloud.workfyqa.page.DashboardPage;
 import us.mircloud.workfyqa.page.LoginPage;
 
-public class TesteDeletarConvidado {
+public class TesteDeletarConvidado extends BaseTest{
 	private DSL dsl;
 	private LoginPage page;
 	private DashboardPage dash;
@@ -28,13 +29,7 @@ public class TesteDeletarConvidado {
 	}
 
 
-	@After
-	public void finaliza() {
-
-		killDriver();
-
-	}
-
+	
 
 	@Test
 	public void testeExcluirConviado() throws Exception {

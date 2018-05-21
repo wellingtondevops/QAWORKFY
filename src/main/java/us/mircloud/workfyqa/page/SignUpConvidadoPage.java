@@ -1,14 +1,10 @@
 package us.mircloud.workfyqa.page;
 
-import us.mircloud.workfyqa.core.DSL;
+import us.mircloud.workfyqa.core.BasePage;
 
-public class SignUpConvidadoPage {
+public class SignUpConvidadoPage extends BasePage {
 	
-	private DSL dsl;
 	
-	public SignUpConvidadoPage() {
-		dsl= new DSL();
-	}
 		
 		public void linkConvite() {
 			

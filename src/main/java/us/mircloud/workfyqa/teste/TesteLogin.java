@@ -2,17 +2,16 @@
 package us.mircloud.workfyqa.teste;
 
 import static us.mircloud.workfyqa.core.DriverFactory.getDriver;
-import static us.mircloud.workfyqa.core.DriverFactory.killDriver;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import us.mircloud.workfyqa.core.BaseTest;
 import us.mircloud.workfyqa.core.DSL;
 import us.mircloud.workfyqa.page.DashboardPage;
 import us.mircloud.workfyqa.page.LoginPage;
 
-public class TesteLogin {
+public class TesteLogin  extends BaseTest{
 	
 	private LoginPage page;
 	private DashboardPage dash;
@@ -24,16 +23,8 @@ public class TesteLogin {
 		getDriver().get("http://workfy-qa.mircloud.us");
 		new DSL();
 		page = new LoginPage();
-		dash= new DashboardPage();		
-		page = new LoginPage();
-		
-	}
-	
-	@After
-	public void finaliza() {
+		dash= new DashboardPage();
 
-	killDriver();
-	
 	}
 
 	@Test

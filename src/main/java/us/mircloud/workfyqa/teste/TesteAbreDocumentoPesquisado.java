@@ -1,15 +1,16 @@
 
 package us.mircloud.workfyqa.teste;
 import static us.mircloud.workfyqa.core.DriverFactory.getDriver;
-import static us.mircloud.workfyqa.core.DriverFactory.killDriver;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
+import us.mircloud.workfyqa.core.BaseTest;
 import us.mircloud.workfyqa.page.DashboardPage;
 import us.mircloud.workfyqa.page.LoginPage;
 
-public class TesteAbreDocumentoPesquisado {
+public class TesteAbreDocumentoPesquisado extends BaseTest {
+
 	private LoginPage page;
 	private DashboardPage dash;
 
@@ -25,12 +26,7 @@ public class TesteAbreDocumentoPesquisado {
 
 	}
 
-	@After
-	public void finaliza() {
 
-		killDriver();
-
-	}
 
 	@Test
 	public void texteAbrirDocumento() throws Exception {
