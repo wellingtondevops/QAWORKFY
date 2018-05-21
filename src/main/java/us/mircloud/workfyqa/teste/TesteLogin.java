@@ -37,6 +37,10 @@ public class TesteLogin  extends BaseTest{
 		page.setBotaoLogin();
 
 		dash.verificaTextoDocumentos();
+		
+		dash.setDropMenuUsuario();	
+
+		dash.setLogout();
 	
 	}
 
