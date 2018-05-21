@@ -1,8 +1,11 @@
 
 package us.mircloud.workfyqa.suite;
+import org.junit.AfterClass;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
+
+import us.mircloud.workfyqa.core.DriverFactory;
 import us.mircloud.workfyqa.teste.TesteAbreDocumentoPesquisado;
 import us.mircloud.workfyqa.teste.TesteCompartilhaDocumento;
 import us.mircloud.workfyqa.teste.TesteCriarUsuario;
@@ -15,7 +18,7 @@ import us.mircloud.workfyqa.teste.TesteUsuarioAceitaConvite;
 
 @RunWith(Suite.class)
 @SuiteClasses({
-	
+
 	TesteLogin.class,
 	TestePesquisa.class, 
 	TesteAbreDocumentoPesquisado.class,
@@ -25,11 +28,21 @@ import us.mircloud.workfyqa.teste.TesteUsuarioAceitaConvite;
 	TesteIndexacaoSemUnicidade.class,
 	TestePainelConfiguracaoDocumento.class,
 	TesteDeletarConvidado.class
-	
+
 })
 
 public class SuiteWorkfy {
-	
-	
+
+	@AfterClass
+	public static void finish() {
+
+		DriverFactory.killDriver();
+
+
+	}
+
+
+
+
 
 }

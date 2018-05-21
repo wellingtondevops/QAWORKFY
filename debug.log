@@ -19,3 +19,6 @@
 [0517/161722.711:ERROR:file_io_win.cc(161)] CreateFile C:\Users\WELLIN~1.CAR\AppData\Local\Temp\scoped_dir14504_10933\Crashpad\settings.dat: O sistema não pode encontrar o caminho especificado. (0x3)
 [0517/161722.748:ERROR:file_io_win.cc(170)] CreateFile C:\Users\WELLIN~1.CAR\AppData\Local\Temp\scoped_dir14504_10933\Crashpad\reports\0bc144cd-61b8-4303-b001-aaa89ea69d50.dmp: O sistema não pode encontrar o caminho especificado. (0x3)
 [0517/161722.748:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0521/161650.922:ERROR:file_io_win.cc(161)] CreateFile C:\Users\WELLIN~1.CAR\AppData\Local\Temp\scoped_dir7216_22504\Crashpad\settings.dat: O sistema não pode encontrar o caminho especificado. (0x3)
+[0521/161650.929:ERROR:file_io_win.cc(170)] CreateFile C:\Users\WELLIN~1.CAR\AppData\Local\Temp\scoped_dir7216_22504\Crashpad\reports\66587588-56a4-4d27-a317-dfa142cb36a7.dmp: O sistema não pode encontrar o caminho especificado. (0x3)
+[0521/161650.929:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
