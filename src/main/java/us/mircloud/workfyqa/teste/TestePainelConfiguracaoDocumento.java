@@ -36,10 +36,9 @@ public class TestePainelConfiguracaoDocumento {
 	@Test
 	public void testePainelConfiguracaoDocumentos() throws Exception {
 
+		page.setEmail();
 
-		page.setEmail("wellington.carvalho@smartscan.com.br");
-
-		page.setPassowrd("123456");
+		page.setPassowrd();
 
 		page.setBotaoLogin();
 

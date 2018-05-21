@@ -40,9 +40,9 @@ public class TesteDeletarConvidado {
 	@Test
 	public void testeExcluirConviado() throws Exception {
 
-		page.setEmail("wellington.carvalho@smartscan.com.br");
+		page.setEmail();
 
-		page.setPassowrd("123456");
+		page.setPassowrd();
 
 		page.setBotaoLogin();
 

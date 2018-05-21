@@ -1,10 +1,10 @@
 package us.mircloud.workfyqa.teste;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
 import us.mircloud.workfyqa.core.DSL;
 import us.mircloud.workfyqa.page.ConfiguracaoDocumentoPage;
 import us.mircloud.workfyqa.page.DashboardPage;
@@ -41,10 +41,10 @@ public class TesteConfDocumentoVerficDuplicidade {
 	@Test
 	public void testeConfigurarDuplicidade() throws Exception {
 		
-		page.setEmail("wellington.carvalho@smartscan.com.br");
+		page.setEmail();
 
-		page.setPassowrd("123456");
-
+		page.setPassowrd();
+		
 		page.setBotaoLogin();
 
 		dash.verificaTextoDocumentos();

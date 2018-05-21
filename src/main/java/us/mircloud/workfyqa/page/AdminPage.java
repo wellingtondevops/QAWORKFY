@@ -16,9 +16,9 @@ public class AdminPage {
 	}
 
 
-	public void setUsuario (String usuario) {
+	public void setUsuario () {
 
-		dsl.escreve_xpath("//input[@type='text']", usuario);
+		dsl.escreve_xpath("//input[@type='text']","convigado@gmail.com");
 
 	}
 

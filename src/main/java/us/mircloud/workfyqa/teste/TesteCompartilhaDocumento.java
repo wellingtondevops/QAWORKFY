@@ -42,9 +42,10 @@ public class TesteCompartilhaDocumento {
 
 	@Test
 	public void testeCompartilharDocumento() throws Exception {
-		page.setEmail("wellington.carvalho@smartscan.com.br");
+		
+		page.setEmail();
 
-		page.setPassowrd("123456");
+		page.setPassowrd();
 
 		page.setBotaoLogin();
 

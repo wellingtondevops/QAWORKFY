@@ -43,10 +43,10 @@ public class TesteCriarUsuario {
 	@Test
 	public void testeCriarUsuario() throws Exception {
 
-		page.setEmail("wellington.carvalho@smartscan.com.br");
+		page.setEmail();
 
-		page.setPassowrd("123456");
-
+		page.setPassowrd();
+		
 		page.setBotaoLogin();
 
 		dash.verificaTextoDocumentos();
@@ -61,7 +61,7 @@ public class TesteCriarUsuario {
 
 		admin.setAdcionarUsuario();		
 
-		admin.setUsuario("convidado@gmail.com");		
+		admin.setUsuario();		
 
 		admin.setPermissaoUsuario();
 

@@ -16,8 +16,8 @@ public class DashboardPage {
 
 	}
 
-	public void setEscrevePesquisar(String procurar) {
-		dsl.escreve_field_id("search-input", procurar);
+	public void setEscrevePesquisar() {
+		dsl.escreve_field_id("search-input","smartscan");
 
 	}
 

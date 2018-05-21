@@ -1,7 +1,7 @@
 package us.mircloud.workfyqa.core;
 import static org.junit.Assert.fail;
+import static us.mircloud.workfyqa.core.DriverFactory.getDriver;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -9,99 +9,99 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class DSL {
 
-	private WebDriver driver;
+	//private WebDriver driver;
 
-	public DSL(WebDriver driver) {
-		this.driver = driver;
+	//public DSL(WebDriver driver) {
+		//this.driver = driver;
 
-	}
+	//}
 
 	public void escreve_field_name(String name_campo, String texto){				
 
-		driver.findElement(By.name(name_campo)).sendKeys(texto);	
+		getDriver().findElement(By.name(name_campo)).sendKeys(texto);	
 
 	}
 
 	public void escreve_field_id(String id, String texto){				
 
-		driver.findElement(By.id(id)).sendKeys(texto);
+		getDriver().findElement(By.id(id)).sendKeys(texto);
 
 	}
 
 	public void escreve_xpath(String xpath, String texto){
 
-		driver.findElement(By.xpath(xpath)).sendKeys(texto);
+		getDriver().findElement(By.xpath(xpath)).sendKeys(texto);
 
 	}		
 
 	public void click_field_name(String name_campo){		
 
-		driver.findElement(By.name(name_campo)).click();
+		getDriver().findElement(By.name(name_campo)).click();
 
 	}
 
 	public void clear_field_name(String name_campo){		
 
-		driver.findElement(By.name(name_campo)).clear();
+		getDriver().findElement(By.name(name_campo)).clear();
 
 	}
 
 	public void clear_xpath(String xpath){		
 
-		driver.findElement(By.xpath(xpath)).clear();
+		getDriver().findElement(By.xpath(xpath)).clear();
 
 	}
 
 	public void clear_field_id(String id){		
 
-		driver.findElement(By.id(id)).clear();
+		getDriver().findElement(By.id(id)).clear();
 
 	}
 
 	public void click_id(String id){		
 
-		driver.findElement(By.id(id)).click();		
+		getDriver().findElement(By.id(id)).click();		
 
 	}
 
 	public void click_xpath(String xpath) {
 
-		driver.findElement(By.xpath(xpath)).click();
+		getDriver().findElement(By.xpath(xpath)).click();
 
 	}
 	public void click_link(String link) {
 
-		driver.findElement(By.linkText(link)).click();
+		getDriver().findElement(By.linkText(link)).click();
 
 	}
 
 	public void entrarFrame(String id) {
 
-		driver.switchTo().frame(id);
+		getDriver().switchTo().frame(id);
 
 	}
 
 	public void sairFrame(){
 
-		driver.switchTo().defaultContent();
+		getDriver().switchTo().defaultContent();
 		
 	}
 
 	public void trocarJanela(String id) {
 
-		driver.switchTo().window(id);
+		getDriver().switchTo().window(id);
 
 	}
 
 	public String obterTexto_xpath( String xpath) {
 
-		return driver.findElement(By.xpath(xpath)).getText();
+		return getDriver().findElement(By.xpath(xpath)).getText();
 
 	}
 
 	public String obterTexto_link( String link) {
 
-		return driver.findElement(By.linkText(link)).getText();
+		return getDriver().findElement(By.linkText(link)).getText();
 
 	}
 
@@ -109,7 +109,7 @@ public class DSL {
 
 		for (int second = 0;; second++) {
 			if (second >= 60) fail("timeout");
-			try { if (Texto.equals(driver.findElement(By.xpath(xpath)).getText())) break; } catch (Exception e) {}
+			try { if (Texto.equals(getDriver().findElement(By.xpath(xpath)).getText())) break; } catch (Exception e) {}
 			Thread.sleep(1000);        
 
 		}
@@ -122,7 +122,7 @@ public class DSL {
 
 		for (int second = 0;; second++) {
 			if (second >= 60) fail("timeout");
-			try { if (texto.equals(driver.findElement(By.linkText(link)).getText())) break; } catch (Exception e) {}
+			try { if (texto.equals(getDriver().findElement(By.linkText(link)).getText())) break; } catch (Exception e) {}
 			Thread.sleep(1000);   
 
 		}
@@ -135,7 +135,7 @@ public class DSL {
 
 		for (int second = 0;; second++) {
 			if (second >= 60) fail("timeout");
-			try { if (texto.equals(driver.findElement(By.id(id)).getText())) break; } catch (Exception e) {}
+			try { if (texto.equals(getDriver().findElement(By.id(id)).getText())) break; } catch (Exception e) {}
 			Thread.sleep(1000);   
 
 		}
@@ -145,53 +145,53 @@ public class DSL {
 
 	public void setLogo(String xpath) {
 
-		driver.findElement(By.xpath(xpath)).click();
+		getDriver().findElement(By.xpath(xpath)).click();
 
 	}
 
 	public String selectComboXpath (String xpath,String texto) {
 
-		new Select(driver.findElement(By.xpath(xpath))).selectByVisibleText(texto);
+		new Select(getDriver().findElement(By.xpath(xpath))).selectByVisibleText(texto);
 		return texto;
 	}
 
 	public String selectComboid (String id,String texto) {
 
-		new Select(driver.findElement(By.xpath(id))).selectByVisibleText(texto);
+		new Select(getDriver().findElement(By.xpath(id))).selectByVisibleText(texto);
 		return texto;
 
 	}	
 
 	public void  aguardaElementoXpath(String xpath) {
 
-		WebDriverWait wait = new WebDriverWait(driver, 20);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
 
 	}
 
 	public void  aguardaElementoLinkTex(String link) {
 
-		WebDriverWait wait = new WebDriverWait(driver, 20);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText(link)));
 
 	}
 	
 	public void  aguardaElementoId(String id) {
 
-		WebDriverWait wait = new WebDriverWait(driver, 20);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText(id)));
 
 	}
 
 	public void fechaTela() {
 
-		driver.close();
+		getDriver().close();
 
 	}
 
 	public void conviteRecebido(String link) {
 
-		driver.get(link);
+		getDriver().get(link);
 
 	}
 

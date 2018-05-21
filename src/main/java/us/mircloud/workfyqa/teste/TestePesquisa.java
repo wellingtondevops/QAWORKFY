@@ -36,9 +36,9 @@ public class TestePesquisa {
 	public void testeBusca() throws Exception {
 
 
-		page.setEmail("wellington.carvalho@smartscan.com.br");
+		page.setEmail();
 
-		page.setPassowrd("123456");
+		page.setPassowrd();
 
 		page.setBotaoLogin();
 
@@ -46,7 +46,7 @@ public class TestePesquisa {
 
 		dash.setComboId();
 
-		dash.setEscrevePesquisar("smartscan");
+		dash.setEscrevePesquisar();
 
 		dash.setComboId();	
 

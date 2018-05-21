@@ -40,10 +40,9 @@ public class TesteIndexacaoSemUnicidade {
 	@Test
 	public void testeIndexarSemDuplicidade() throws Exception {
 
+		page.setEmail();
 
-		page.setEmail("wellington.carvalho@smartscan.com.br");
-
-		page.setPassowrd("123456");
+		page.setPassowrd();
 
 		page.setBotaoLogin();
 
