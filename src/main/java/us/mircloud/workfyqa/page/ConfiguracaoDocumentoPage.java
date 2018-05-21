@@ -1,6 +1,5 @@
 package us.mircloud.workfyqa.page;
 import static org.junit.Assert.assertEquals;
-import org.openqa.selenium.WebDriver;
 import us.mircloud.workfyqa.core.DSL;
 
 
@@ -9,8 +8,8 @@ import us.mircloud.workfyqa.core.DSL;
 public class ConfiguracaoDocumentoPage {
 	private DSL dsl;
 
-	public ConfiguracaoDocumentoPage(WebDriver driver) {
-		dsl =new DSL(driver);
+	public ConfiguracaoDocumentoPage() {
+		dsl =new DSL();
 	}
 
 	public void verificaBotaoConfiguracoes() throws InterruptedException {

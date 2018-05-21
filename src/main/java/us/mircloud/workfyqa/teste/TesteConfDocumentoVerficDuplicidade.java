@@ -1,19 +1,16 @@
 package us.mircloud.workfyqa.teste;
-
+import static us.mircloud.workfyqa.core.DriverFactory.getDriver;
+import static us.mircloud.workfyqa.core.DriverFactory.killDriver;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-
 import us.mircloud.workfyqa.core.DSL;
 import us.mircloud.workfyqa.page.ConfiguracaoDocumentoPage;
 import us.mircloud.workfyqa.page.DashboardPage;
 import us.mircloud.workfyqa.page.LoginPage;
 
 public class TesteConfDocumentoVerficDuplicidade {
-	
-	private WebDriver driver;
-	private DSL dsl;	
+
 	private LoginPage page;
 	private DashboardPage dash;
 	private ConfiguracaoDocumentoPage  confdocto;
@@ -21,30 +18,29 @@ public class TesteConfDocumentoVerficDuplicidade {
 	@Before
 	public void inicializa() {
 
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.get("http://workfy-qa.mircloud.us");
-		new DSL(driver);
-		page = new LoginPage(driver);
-		dash= new DashboardPage(driver);
-		confdocto = new ConfiguracaoDocumentoPage(driver);	
-		
+		getDriver().get("http://workfy-qa.mircloud.us");
+		new DSL();
+		page = new LoginPage();
+		dash= new DashboardPage();
+		confdocto = new ConfiguracaoDocumentoPage();	
+
 	}
 
 
-	
-	//@After
-	//public void finaliza() {
 
-		//driver.quit();
-	//}
+	@After
+	public void finaliza() {
+
+		killDriver();
+
+	}
 	@Test
 	public void testeConfigurarDuplicidade() throws Exception {
-		
+
 		page.setEmail();
 
 		page.setPassowrd();
-		
+
 		page.setBotaoLogin();
 
 		dash.verificaTextoDocumentos();
@@ -62,8 +58,8 @@ public class TesteConfDocumentoVerficDuplicidade {
 		confdocto.obterTextoNomeDocumento();		
 
 		confdocto.obterTextoConfDentroConf();
-	
-	
+
+
 	}
 
 }

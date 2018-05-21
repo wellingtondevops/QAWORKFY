@@ -1,11 +1,9 @@
-//Feita toda abstração só faltando criar o componente page para o metodo handles
 package us.mircloud.workfyqa.teste;
+import static us.mircloud.workfyqa.core.DriverFactory.getDriver;
+import static us.mircloud.workfyqa.core.DriverFactory.killDriver;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-
 import us.mircloud.workfyqa.core.DSL;
 import us.mircloud.workfyqa.page.AdminPage;
 import us.mircloud.workfyqa.page.DashboardPage;
@@ -13,7 +11,6 @@ import us.mircloud.workfyqa.page.LoginPage;
 
 public class TesteCriarUsuario {
 
-	private WebDriver driver;
 	private DSL dsl;
 	private LoginPage page;
 	private DashboardPage dash;
@@ -23,21 +20,19 @@ public class TesteCriarUsuario {
 	@Before
 	public void inicializa() {
 
-
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.get("http://workfy-qa.mircloud.us");
-		dsl = new DSL(driver);
-		page = new LoginPage(driver);
-		dash= new DashboardPage(driver);
-		admin=new AdminPage(driver);
+		getDriver().get("http://workfy-qa.mircloud.us");	
+		dsl = new DSL();
+		page = new LoginPage();
+		dash= new DashboardPage();
+		admin=new AdminPage();
 
 	}
 
 	@After
 	public void finaliza() {
 
-		driver.quit();
+		killDriver();
+
 	}
 
 	@Test
@@ -46,7 +41,7 @@ public class TesteCriarUsuario {
 		page.setEmail();
 
 		page.setPassowrd();
-		
+
 		page.setBotaoLogin();
 
 		dash.verificaTextoDocumentos();
@@ -55,7 +50,7 @@ public class TesteCriarUsuario {
 
 		dash.setNovoUsuario();
 
-		dsl.trocarJanela((String) driver.getWindowHandles().toArray()[1]);
+		dsl.trocarJanela((String) getDriver().getWindowHandles().toArray()[1]);
 
 		admin.verifcarPresencaTextoNenhumUsuarioCadastrado();	
 
@@ -75,7 +70,7 @@ public class TesteCriarUsuario {
 
 		admin.fecharPageAdmin();		
 
-		dsl.trocarJanela((String) driver.getWindowHandles().toArray()[0]);		
+		dsl.trocarJanela((String) getDriver().getWindowHandles().toArray()[0]);		
 
 		dash.botaoAvatar();
 

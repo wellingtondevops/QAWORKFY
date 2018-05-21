@@ -1,12 +1,10 @@
 package us.mircloud.workfyqa.page;
-import org.openqa.selenium.WebDriver;
-
 import us.mircloud.workfyqa.core.DSL;
 
 public class ModoGedPage {
 	private DSL dsl;
-	public ModoGedPage(WebDriver driver) {
-		dsl = new DSL(driver);
+	public ModoGedPage() {
+		dsl = new DSL();
 	}	
 
 	public void setCodauAvaliaDesempenho() {

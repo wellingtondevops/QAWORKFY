@@ -1,15 +1,13 @@
 package us.mircloud.workfyqa.page;
 
-import org.openqa.selenium.WebDriver;
-
 import us.mircloud.workfyqa.core.DSL;
 
 public class SignUpConvidadoPage {
 	
 	private DSL dsl;
 	
-	public SignUpConvidadoPage(WebDriver driver) {
-		dsl= new DSL(driver);
+	public SignUpConvidadoPage() {
+		dsl= new DSL();
 	}
 		
 		public void linkConvite() {

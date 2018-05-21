@@ -1,13 +1,11 @@
 package us.mircloud.workfyqa.page;
-import org.openqa.selenium.WebDriver;
-
 import us.mircloud.workfyqa.core.DSL;
 
 public class AdminPage {
 	private DSL dsl;
 
-	public AdminPage(WebDriver driver) {
-		dsl = new DSL(driver);
+	public AdminPage() {
+		dsl = new DSL();
 	}
 
 	public void setAdcionarUsuario () {

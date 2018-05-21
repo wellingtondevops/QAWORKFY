@@ -1,35 +1,36 @@
-//Feita toda abstração
 package us.mircloud.workfyqa.teste;
+import static us.mircloud.workfyqa.core.DriverFactory.getDriver;
+import static us.mircloud.workfyqa.core.DriverFactory.killDriver;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import us.mircloud.workfyqa.page.AdminPage;
 import us.mircloud.workfyqa.page.DashboardPage;
 import us.mircloud.workfyqa.page.LoginPage;
 import us.mircloud.workfyqa.page.SignUpConvidadoPage;
 
 public class TesteUsuarioAceitaConvite {
-	private WebDriver driver;
+
 	private DashboardPage dash;
 	private SignUpConvidadoPage convite;
 
 
 	@Before
-	public void inicializa() {		
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();			
-		new LoginPage(driver);
-		dash= new DashboardPage(driver);
-		new AdminPage(driver);
-		convite= new SignUpConvidadoPage(driver);
+	public void inicializa() {			
+
+
+		getDriver().get("http://workfy-qa.mircloud.us");			
+		new LoginPage();
+		dash= new DashboardPage();
+		new AdminPage();
+		convite= new SignUpConvidadoPage();
 
 	}
 	@After
 	public void finaliza() {
 
-		driver.quit();
+		killDriver();
+
 	}
 
 	@Test

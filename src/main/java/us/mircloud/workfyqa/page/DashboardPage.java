@@ -7,8 +7,8 @@ public class DashboardPage {
 	private DSL dsl;
 	private WebDriver driver;
 
-	public DashboardPage(WebDriver driver) {
-		dsl = new DSL(driver);
+	public DashboardPage() {
+		dsl = new DSL();
 	}
 
 	public void setComboId() {
