@@ -74,6 +74,8 @@ public class TestePainelConfiguracaoDocumento extends BaseTest{
 		confdocto.checkTextoFieldEmail();
 
 		confdocto.setSairEdicaoDocumento();
+		
+		
 
 	}
 

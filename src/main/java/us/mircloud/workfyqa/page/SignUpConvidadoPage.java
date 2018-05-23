@@ -8,7 +8,7 @@ public class SignUpConvidadoPage extends BasePage {
 		
 		public void linkConvite() {
 			
-			dsl.conviteRecebido("http://workfy-qa.mircloud.us/sponsor/#/create/convidado@gmail.com/wellington.carvalho@smartscan.com.br");
+			dsl.conviteRecebido("http://workfy-qa.mircloud.us/sponsor/#/create/wellingtondevops@gmail.com/wellington.carvalho@smartscan.com.br");
 			
 		}
 		

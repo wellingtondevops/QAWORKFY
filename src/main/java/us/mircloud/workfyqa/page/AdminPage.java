@@ -11,7 +11,7 @@ public class AdminPage extends BasePage {
 
 	public void setUsuario () {
 
-		dsl.escreve_xpath("//input[@type='text']","convigado@gmail.com");
+		dsl.escreve_xpath("//input[@type='text']","wellingtondevops@gmail.com");
 
 	}
 

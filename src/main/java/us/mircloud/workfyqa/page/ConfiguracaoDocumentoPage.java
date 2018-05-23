@@ -142,6 +142,8 @@ public class ConfiguracaoDocumentoPage extends BasePage {
 
 		dsl.aguardaElementoXpath("//select[@class='swal2-select']");
 		
+	
+		
 	}
 
 	public void setComboUsuarios() {
@@ -152,7 +154,7 @@ public class ConfiguracaoDocumentoPage extends BasePage {
 
 	public void SelectComboConvidados() {
 
-		dsl.selectComboXpath("//select[@class='swal2-select']", "convidado@gmail.com");
+		dsl.selectComboXpath("//select[@class='swal2-select']", "wellingtondevops@gmail.com");
 
 	}
 
@@ -164,7 +166,7 @@ public class ConfiguracaoDocumentoPage extends BasePage {
 
 	public void aguardarMensagemAdicaoUsuario() throws InterruptedException {
 
-		dsl.chekarComponenteId("convidado@gmail.com Adicionado com sucesso!", "swal2-content");
+		dsl.chekarComponenteId("wellingtondevops@gmail.com Adicionado com sucesso!", "swal2-content");
 
 	}
 	public void setOk() {
@@ -194,7 +196,7 @@ public void setRemoverConviado() {
 
 public void aguardarMensagemRemovidoUsuario() throws InterruptedException {
 	
-	dsl.chekarComponenteId("convidado@gmail.com Removido com sucesso!", "id=swal2-content");
+	dsl.chekarComponenteId("wellingtondevops@gmail.com Removido com sucesso!", "id=swal2-content");
 }
 
 

@@ -38,6 +38,8 @@ public class TesteLogin  extends BaseTest{
 
 		dash.verificaTextoDocumentos();
 		
+		dash.aguardaElemento();
+		
 		dash.setDropMenuUsuario();	
 
 		dash.setLogout();

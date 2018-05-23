@@ -108,7 +108,7 @@ public class DSL {
 	public String chekarComponente(String Texto, String xpath) throws InterruptedException {
 
 		for (int second = 0;; second++) {
-			if (second >= 60) fail("timeout");
+			if (second >= 70) fail("timeout");
 			try { if (Texto.equals(getDriver().findElement(By.xpath(xpath)).getText())) break; } catch (Exception e) {}
 			Thread.sleep(1000);        
 
@@ -121,7 +121,7 @@ public class DSL {
 	public String chekarComponenteLink(String texto, String link) throws InterruptedException {
 
 		for (int second = 0;; second++) {
-			if (second >= 60) fail("timeout");
+			if (second >= 70) fail("timeout");
 			try { if (texto.equals(getDriver().findElement(By.linkText(link)).getText())) break; } catch (Exception e) {}
 			Thread.sleep(1000);   
 
@@ -134,7 +134,7 @@ public class DSL {
 	public String chekarComponenteId(String texto, String id) throws InterruptedException {
 
 		for (int second = 0;; second++) {
-			if (second >= 60) fail("timeout");
+			if (second >= 70) fail("timeout");
 			try { if (texto.equals(getDriver().findElement(By.id(id)).getText())) break; } catch (Exception e) {}
 			Thread.sleep(1000);   
 
@@ -164,21 +164,21 @@ public class DSL {
 
 	public void  aguardaElementoXpath(String xpath) {
 
-		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
 
 	}
 
 	public void  aguardaElementoLinkTex(String link) {
 
-		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText(link)));
 
 	}
 	
 	public void  aguardaElementoId(String id) {
 
-		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText(id)));
 
 	}

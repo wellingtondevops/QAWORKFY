@@ -59,8 +59,10 @@ public class TesteCompartilhaDocumento extends BaseTest{
 		confdocto.setAddMembros();
 
 		confdocto.checharAdcionarUsuario();
+		
+		//confdocto.aguardarComboUsuarios();
 
-		confdocto.setComboUsuarios();
+		//confdocto.setComboUsuarios();
 
 		confdocto.aguardarComboUsuarios();
 

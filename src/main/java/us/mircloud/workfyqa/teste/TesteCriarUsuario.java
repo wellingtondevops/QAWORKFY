@@ -58,9 +58,9 @@ public class TesteCriarUsuario extends BaseTest{
 		admin.setSetarusuario();
 
 		admin.setClickModal();		
-
-		admin.aguardaBotaoSalvar();
-
+		
+		admin.aguardaBotaoSalvar();  
+		
 		admin.setSalvarUsuario();
 
 		admin.fecharPageAdmin();		
